@@ -1,6 +1,5 @@
 package com.spring.boot.blog.services;
 
-import com.spring.boot.blog.entities.Post;
 import com.spring.boot.blog.payloads.PostDTO;
 import com.spring.boot.blog.payloads.PostResponse;
 import org.springframework.stereotype.Service;
@@ -32,6 +31,6 @@ public interface PostService {
     List<PostDTO> getPostByCategory(Integer categoryId);
 
     // search posts
-    List<Post> searchPost(String keyword);
+    List<PostDTO> searchPost(String keyword);
 
 }

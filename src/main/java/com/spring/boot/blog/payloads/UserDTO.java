@@ -1,5 +1,6 @@
 package com.spring.boot.blog.payloads;
 
+import com.spring.boot.blog.entities.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -32,10 +35,6 @@ public class UserDTO {
     @NotEmpty(message = "about can't be null or empty")
     private String about;
 
-    public UserDTO(String name, String email, String password, String about) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.about = about;
-    }
+    private RoleDTO roleDTO;
+
 }
